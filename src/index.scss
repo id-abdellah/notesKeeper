@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: system-ui;
+}
+
+input, button, textarea {
+    display: block;
+    font-family: inherit;
+}

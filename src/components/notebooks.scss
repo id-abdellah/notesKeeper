@@ -1,0 +1,140 @@
+.notebooks-wrapper {
+    margin: 10px 0;
+    padding: 0px 10px;
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 8px 10px 15px;
+        p {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .add-icon {
+            font-size: 12px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                background-color: gray;
+            }
+        }
+    }
+
+    .notebooks {
+        // overflow: auto;
+        // width: 100%;
+        // height: 200px;
+        // background-color: red;
+        // padding: 10px;
+        .notebook-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffdbcc8f;
+            border: 2px solid transparent;
+            padding: 10px 8px 10px 15px;
+            margin-block: 10px;
+            border-radius: 8px;
+            transition: .3s;
+            cursor: pointer;
+            &:hover {
+                filter: brightness(80%);
+            }
+            
+            &.active-notebook {
+                background-color: transparent;
+                border-color: #ffdbcc8f;
+            }
+
+            .heading {
+                flex: 1;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .action {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                div {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    display: grid;
+                    place-content: center;
+                    cursor: pointer;
+                    transition: .3s;
+
+                    * {
+                        font-size: 10px;
+                    }
+
+                    &:hover {
+                        background-color: gray;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    dialog {
+        width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background-color: #f8e4dd;
+
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            padding: 8px;
+
+            &::placeholder {
+                font-weight: 400;
+                font-size: 13px;
+                letter-spacing: 1px;
+            }
+        }
+
+        .action {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 10px;
+            gap: 10px;
+
+            button {
+                border: none;
+                padding: 8px 10px;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: .3s;
+
+                &.create {
+                    background-color: lightgreen;
+                }
+
+                &:hover {
+                    filter: brightness(80%);
+                }
+            }
+        }
+    }
+}

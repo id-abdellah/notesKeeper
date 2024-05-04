@@ -1,0 +1,28 @@
+.greeting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+        font-weight: 600;
+    }
+
+    .burger-menu {
+        transition: .3s;
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #efe7e6;
+        }
+    }
+
+    .burger-menu.active {
+        background-color: #efe7e6 !important;
+    }
+}

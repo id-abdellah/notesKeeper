@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+.app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    // Navbar
+    nav {
+        width: 250px;
+        height: 100%;
+        overflow: auto;
+        transition: .3s;
+        z-index: 999;
+        // background-color: #f8e4dd;
+        @media (max-width: 767px) {
+            // background-color: #f8e4dd;
+            background-color: white;
+            position: fixed;
+            transform: translateX(-101%);
+            top: 0;
+            left: 0;
+            box-shadow: inset 0px 0px 4px 0px black;
+        }
+
+        .app-name {
+            font-family: "Marck Script", cursive;
+            text-align: center;
+            padding: 20px 0;
+            font-weight: 600;
+            font-size: 35px;
+            text-decoration: underline;
+            border-bottom: 1px solid lightgray;
+            margin: 0 10px 20px;
+        }
+    }
+
+    nav.active {
+        transform: translateX(0%);
+    }
+
+    // main
+    main {
+        background-color: #fffbff;
+        flex: 1;
+        height: 100%;
+        padding: 15px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+}
